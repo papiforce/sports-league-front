@@ -1,0 +1,48 @@
+const Theme = {
+  screens: {
+    smallMobile: 375,
+    mobile: 480,
+    tablet: 768,
+    smallDesktop: 1024,
+    desktop: 1280,
+    maxDesktop: 1440,
+  },
+  colors: {
+    black: "#000",
+    white: "#FFFFFF",
+    white30: "rgba(255, 255, 255, 0.3)",
+    purple: "#7F5AF0",
+    green: "#2CB67D",
+    green100: "#00A36C",
+    greyDark: "#16161A",
+    greyMid: "#CCCCCC",
+    greyLight: "#242629",
+    greyLighter: "#666666",
+    transparent: "transparent",
+    yellow: "#FFA500",
+    red: "#8B0000",
+    gradientPurpleGreen:
+      "linear-gradient(90deg, rgba(127,90,240,1) 25%, rgba(44,182,125,1) 75%)",
+  },
+  fontSize: {
+    font12: "12px",
+    font14: "14px",
+    font16: "16px",
+    font18: "18px",
+    font24: "24px",
+    font28: "28px",
+    font32: "32px",
+    from20to14: "clamp(0.875rem, 3vw, 1.25rem)",
+    from20to16: "clamp(1rem, 2vw, 1.25rem)",
+    from24to14: "clamp(0.875rem, 3vw, 1.5rem)",
+    from32to18: "clamp(1.125rem, 3vw, 2rem)",
+    from34to16: "clamp(1rem, 3vw, 2.125rem)",
+    from34to24: "clamp(1.5rem, 4vw, 2.125rem)",
+    from40to24: "clamp(1.5rem, 5vw, 2.5rem)",
+    from40to30: "clamp(1.875rem, 5vw, 2.5rem)",
+    from56to32: "clamp(2rem, 6vw, 3.5rem)",
+    from100to52: "clamp(3.25rem, 10vw, 6.25rem)",
+  },
+};
+
+export default Theme;
