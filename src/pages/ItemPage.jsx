@@ -73,6 +73,8 @@ const ItemPage = () => {
 
         const updatedCart = { ...parseCart, itemsIds };
 
+        setQuantity(0);
+
         return localStorage.setItem(
           `cart-${auth.user._id}`,
           JSON.stringify(updatedCart)
@@ -88,11 +90,15 @@ const ItemPage = () => {
 
       const updatedCart = { ...parseCart, itemsIds };
 
+      setQuantity(0);
+
       return localStorage.setItem(
         `cart-${auth.user._id}`,
         JSON.stringify(updatedCart)
       );
     }
+
+    setQuantity(0);
 
     return localStorage.setItem(
       `cart-${auth.user._id}`,

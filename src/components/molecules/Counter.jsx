@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 
 import CircleButton from "components/atoms/Buttons/CircleButton";
@@ -13,6 +13,10 @@ const Container = styled.div`
 
 const Counter = ({ value, minValue, maxValue, onValueChange, style }) => {
   const [val, setVal] = useState(value ?? 0);
+
+  useEffect(() => {
+    setVal(value);
+  }, [value]);
 
   return (
     <Container style={style}>
