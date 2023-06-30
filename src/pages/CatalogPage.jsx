@@ -78,15 +78,21 @@ const CatalogPage = () => {
           />
 
           <Wrapper>
-            {items.map((item, idx) => (
-              <ItemCard
-                key={idx}
-                name={item.name}
-                posterUrl={item.pictures[0]}
-                price={item.price}
-                onClick={() => navigate(`/catalogue/article/${item._id}`)}
-              />
-            ))}
+            {items.length > 0 ? (
+              items.map((item, idx) => (
+                <ItemCard
+                  key={idx}
+                  name={item.name}
+                  posterUrl={item.pictures[0]}
+                  price={item.price}
+                  onClick={() => navigate(`/catalogue/article/${item._id}`)}
+                />
+              ))
+            ) : (
+              <Text fontSize="font18" textAlign="center">
+                Aucun article ne correspond à votre recherche
+              </Text>
+            )}
           </Wrapper>
         </>
       )}

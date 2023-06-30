@@ -148,19 +148,22 @@ const ItemPage = () => {
 
           {auth.isAuthenticated && (
             <>
-              <Counter
-                value={quantity}
-                onValueChange={(val) => setQuantity(val)}
-                style={{ margin: "0 auto 24px" }}
-              />
+              {item.quantity > 0 && (
+                <Counter
+                  value={quantity}
+                  maxValue={item.quantity}
+                  onValueChange={(val) => setQuantity(val)}
+                  style={{ margin: "0 auto 24px" }}
+                />
+              )}
 
               <Button
                 color="gradientPurpleGreen"
-                onClick={addToCart}
-                isDisable={quantity === 0}
+                onClick={item.quantity === 0 ? () => {} : addToCart}
+                isDisable={item.quantity === 0 || quantity === 0}
                 style={{ padding: 12 }}
               >
-                {buttonText}
+                {item.quantity === 0 ? "Rupture de stock" : buttonText}
               </Button>
             </>
           )}
