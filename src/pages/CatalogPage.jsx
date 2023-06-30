@@ -14,8 +14,11 @@ import ItemCard from "components/molecules/ItemCard";
 
 const Wrapper = styled.div`
   display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
   align-items: center;
   justify-content: space-around;
+  margin-bottom: 116px;
 `;
 
 const CatalogPage = () => {
